@@ -5,12 +5,13 @@ import com.crater.backoffice.bean.dto.UserRegisterDto;
 import com.crater.backoffice.dao.mapper.UserMapper;
 import com.crater.backoffice.exception.DBOperationsException;
 import com.crater.backoffice.exception.UserException;
+import com.crater.backoffice.service.UserEditService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class UserEditServiceImpl implements com.crater.backoffice.service.UserEditService {
+public class UserEditServiceImpl implements UserEditService {
     private UserMapper userMapper;
 
     @Transactional
