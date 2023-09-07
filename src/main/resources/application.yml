@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /backOffice/
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/bo
+    username: bo
+    password: suzumiyaBo
+springdoc:
+  packages-to-scan: com.crater.backoffice.controller
+  swagger-ui:
+    enabled: true
+    path: open-api.html
+
+logging:
+  file:
+    name: "~/log/bo.log"
+  logback:
+    rollingpolicy:
+      max-file-size: 100MB
+  level:
+    root: info
+    com:
+      crater:
+        hanaengine:
+          dao:
+            mapper: debug
