@@ -7,5 +7,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface UserMapper {
     UserDetailInfoDto queryUserInfoByUserId(String userId);
-    void insertUser(InsertUserDbDto insertUserDbDto);
+    int insertUser(InsertUserDbDto insertUserDbDto);
 }
