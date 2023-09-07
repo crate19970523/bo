@@ -17,7 +17,7 @@ public class ControllerExceptionHandler {
                 .setErrorMessage("發生內部邏輯錯誤，請聯絡開發人員。"));
     }
 
-    @ExceptionHandler({UserException.class})
+    @ExceptionHandler({UserException.class, RequestDataException.class})
     @ResponseBody
     public BaseResponse handleOtherCustomException(Throwable e, RedirectAttributes redirectAttributes) {
         return new BaseResponse().setErrorMessage(new ErrorMessage().setSuccess(false).setErrorMessage(e.getMessage()));
